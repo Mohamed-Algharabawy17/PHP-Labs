@@ -2,15 +2,6 @@
 
 This lab focuses on enhancing a contact form implemented in PHP by adding features to log user submissions and creating an interface to view the log data.
 
-![Contact Form](images/contact_form.png)
-*Figure 1: Contact Form Interface*
-
-![After Submition](images/after_submit.png)
-*Figure 2: After Submition Interface*
-
-![Log Viewer](images/user_data.png)
-*Figure 3: Log Viewer Interface*
-
 ## Files Overview
 - `index.php`: Contains the main contact form where users submit their information.
 - `config.php`: Stores configurations such as max length and log file paths.
@@ -35,3 +26,12 @@ This lab focuses on enhancing a contact form implemented in PHP by adding featur
 5. Use the `View User Logs` button in `index.php` to access the log viewer interface (`log_viewer.php`).
 6. Review the log data displayed in the interface.
 
+
+![Contact Form](images/contact_form.png)
+*Figure 1: Contact Form Interface*
+
+![After Submition](images/after_submit.png)
+*Figure 2: After Submition Interface*
+
+![Log Viewer](images/user_data.png)
+*Figure 3: Log Viewer Interface*
