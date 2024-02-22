@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: rgb(221, 221, 221);
+}
+
+.data_table{
+    width: 400px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.form_container{
+    width: 360px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px dashed rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+hr{
+    margin-top: 12px;
+    width: 98%; 
+    max-width: 390px;
+}
+
+span{
+    color: red;
+    font-size: 12px;
+}
