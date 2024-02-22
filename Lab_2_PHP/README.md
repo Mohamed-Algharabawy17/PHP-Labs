@@ -2,13 +2,13 @@
 
 This lab focuses on enhancing a contact form implemented in PHP by adding features to log user submissions and creating an interface to view the log data.
 
-![Contact Form](/images/contact_form.png)
+![Contact Form](images/contact_form.png)
 *Figure 1: Contact Form Interface*
 
-![After Submition](/images/user_data.png)
+![After Submition](images/user_data.png)
 *Figure 2: After Submition Interface*
 
-![Log Viewer](/images/user_data.png)
+![Log Viewer](images/user_data.png)
 *Figure 3: Log Viewer Interface*
 
 ## Files Overview
