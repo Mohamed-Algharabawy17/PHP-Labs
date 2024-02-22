@@ -5,7 +5,7 @@ This lab focuses on enhancing a contact form implemented in PHP by adding featur
 ![Contact Form](images/contact_form.png)
 *Figure 1: Contact Form Interface*
 
-![After Submition](images/user_data.png)
+![After Submition](images/after_submit.png)
 *Figure 2: After Submition Interface*
 
 ![Log Viewer](images/user_data.png)
