@@ -26,5 +26,5 @@ The visitor counter is implemented using PHP sessions and file I/O.
 
 ## Sample Output
 
-![Visitor Counter](visitor_counter.png)
+![Visitor Counter](./output.png)
 
