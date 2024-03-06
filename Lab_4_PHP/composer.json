@@ -3,7 +3,7 @@
 		"illuminate/database": "^9.50",
 		"illuminate/events": "^9.52"
 	},
-	"outoload" : {
+	"autoload" : {
 		"files": ["config.php"],
 		"classmap" : ["Model"]
 	}

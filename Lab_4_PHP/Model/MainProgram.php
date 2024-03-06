@@ -1,8 +1,4 @@
 <?php
-require_once("vendor/autoload.php");
-require_once("DbHandler.php");
-require_once("Model/items.php");
-require_once("config.php");
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 
@@ -73,11 +69,13 @@ class MainProgram implements DbHandler
             return $item[0];
     }
     
-    public function searchByColumn($name_column, $value)
+    public function searchByColumn($field, $value)
     {
-        $items = Items::where($name_column, 'like', "%$value%")->get();
-        if (count($items) > 0)
+        $items = Items::where($field, 'like', "%$value%")->get();
+
+        if ($items->isNotEmpty()) {
             return $items;
+        }
     }
 }
 ?>

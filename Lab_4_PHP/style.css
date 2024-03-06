@@ -43,22 +43,32 @@ tr:hover {
     color: white;
 }
 
+.show-btn{
+  border: 1px solid rgb(128, 23, 0);
+  background-color: white;
+  color: black;
+  border-radius: 7px;
+  padding: 6px;
+  text-decoration: none;
+}
+
+.show-btn:hover{
+  background-color: rgba(123, 14, 14, 0.879);
+  border: 1px solid rgb(92, 4, 4);
+  color: white;
+}
+
 
 .form-content{
   display: flex;
-  height: 150px;
+  height: 50px;
+  width: 600px;
   /* background-color: red; */
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  margin-top: 10px;
-}
+  justify-content: space-around;
 
-.form-content>div{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  margin-top: 80px;
 }
 
 [type="text"]{

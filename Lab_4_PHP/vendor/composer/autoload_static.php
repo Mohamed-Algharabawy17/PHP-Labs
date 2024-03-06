@@ -18,6 +18,7 @@ class ComposerStaticInitf9fef9509967f87e539c546d07bfc9f1
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'ef65a1626449d89d0811cf9befce46f0' => __DIR__ . '/..' . '/illuminate/events/functions.php',
+        'cfe4039aa2a78ca88e07dadb7b1c6126' => __DIR__ . '/../..' . '/config.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -178,6 +179,9 @@ class ComposerStaticInitf9fef9509967f87e539c546d07bfc9f1
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'DbHandler' => __DIR__ . '/../..' . '/Model/DbHandler.php',
+        'Items' => __DIR__ . '/../..' . '/Model/items.php',
+        'MainProgram' => __DIR__ . '/../..' . '/Model/MainProgram.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',

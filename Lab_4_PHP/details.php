@@ -8,16 +8,15 @@
 </head>
 <body>
 <?php
-require "vendor/autoload.php";
-require_once "Model/MainProgram.php";
-
+require "./vendor/autoload.php";
 $conn = new MainProgram;
 
 try 
 {
-    if ($conn->connect()) {
+    if ($conn->connect()) 
+    {
         $item = $conn->getRecordById($_GET["id"], "id");
-        
+        /********************************************* Draw item card *******************************************/
         if ($item) {
         ?>
             <h2>Product Card</h2>
@@ -36,6 +35,8 @@ try
         } else {
             echo "<p>No item found with the provided ID.</p>";
         }
+        
+        /****************************************************************************************************** */
     }
 } 
 catch (\Exception $e) 

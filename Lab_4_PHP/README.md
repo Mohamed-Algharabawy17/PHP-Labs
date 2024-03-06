@@ -29,13 +29,24 @@ The project consists of the following components:
 
 ## Sample Output Images
 
-![Details Page](./output_images/search_validation.png)
+![Details Page](./output_images/empty_value_search.png)
 
 
-*Figure 3: Screenshot of the index.php page displaying search functionality validation.*
+*Figure 3: Screenshot of the index.php page displaying search functionality validation empty value.*
+
+![Details Page](./output_images/wrong_field_searrch.png)
 
 
-![Details Page](./output_images/searching.png)
+*Figure 3: Screenshot of the index.php page displaying search functionality validation wrong field.*
+
+
+![Details Page](./output_images/correct%20search.png)
 
 
 *Figure 4: Screenshot of the index.php page displaying searching for specific item.*
+
+
+![Details Page](./output_images/show_all.png)
+
+
+*Figure 4: Screenshot of the index.php page displaying all item.*

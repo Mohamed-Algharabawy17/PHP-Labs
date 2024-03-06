@@ -8,6 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'DbHandler' => $baseDir . '/Model/DbHandler.php',
+    'Items' => $baseDir . '/Model/items.php',
+    'MainProgram' => $baseDir . '/Model/MainProgram.php',
     'Normalizer' => $vendorDir . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
     'PhpToken' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
     'Stringable' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',

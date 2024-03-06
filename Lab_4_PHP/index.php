@@ -1,7 +1,7 @@
 <?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
 
 <!DOCTYPE html>
@@ -15,9 +15,7 @@
 <body>
 
 <?php
-   require "vendor/autoload.php";
-   require_once "Model/MainProgram.php";
-
+   require "./vendor/autoload.php";
    $conn = new MainProgram;
    $items_num = 5;
    $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
@@ -26,28 +24,56 @@
    {
       if ($conn->connect()) 
       {
+               
          $offset = ($currentPage - 1) * $items_num;
          $fields = ["id", "product_name"];
          $items = $conn->getData($fields, $offset);
-         
-         if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"], $_POST["name_column"], $_POST["value"])) 
+
+         /******************************* get data from db and validate user input ******************************/
+
+         if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"], $_POST["value"])) 
          {
-               $searchField = $_POST["name_column"];
+            if ($_POST["submit"] === "Show All") 
+            {
+                $items = $conn->searchByColumn('id',"");
+            } else if ($_POST["submit"] === "Search") 
+            {
                $searchValue = $_POST["value"];
-               
-               if (!empty($searchField) && $searchField === "id" || $searchField === "product_name")
+               $searchField = $_POST["field"];
+
+
+               $validFields = ["product_name", "id", "PRODUCT_code", "list_price", "category"];
+            
+               if (!in_array($searchField, $validFields)) 
                {
-                  $items = $conn->searchByColumn($searchField, $searchValue);
+                  echo "<span class='error-message'> Please select a valid search field :)</span>";
                } else {
-                  echo "<span class='error-message'> Please provide a valid column name & valid value for searching :)</span>";
+                  if (!empty($searchValue))
+                  {
+                     $items = $conn->searchByColumn($searchField, $searchValue);
+                     if ($items === null)
+                     {
+                        echo "<span class='error-message'> Please select a valid search field :)</span>";
+                     }
+                  } else {
+                     echo "<span class='error-message'> Please provide a valid value for searching :)</span>";
+                  }
                }
+            }
          }
+         /********************************************** Searching form ********************************************** */
+
       ?>
          <form action="" method="post">
             <div class="form-content">
                <div>
-                  <label for="name_column">Column Name</label>
-                  <input type="text" id="name_column" name="name_column">
+               <select name="field">
+                  <option value="product_name">Product Name</option>
+                  <option value="id">ID</option>
+                  <option value="PRODUCT_code">Product Code</option>
+                  <option value="list_price">List Price</option>
+                  <option value="category">Category</option>
+               </select>
                </div>
 
                <div>
@@ -57,6 +83,7 @@
 
                <div>
                   <input type="submit" name="submit" value="Search" class="more-btn">
+                  <input type="submit" name="submit" value="Show All" class="show-btn">
                </div>
                
             </div>
@@ -69,6 +96,7 @@
                      <th>Details</th>
                </tr>
       <?php
+         /*********************************************** Draw items table *******************************************/
          if ($items !== null) 
          {
                foreach ($items as $item) 
@@ -84,6 +112,7 @@
          } else {
                echo "<tr><td colspan='3'>No items found !!!!!!!!!</td></tr>";
          }
+         /********************************************************************************************************** */
       ?>
          </table>
 

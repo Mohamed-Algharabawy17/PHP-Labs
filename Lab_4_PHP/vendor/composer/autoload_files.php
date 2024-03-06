@@ -17,4 +17,5 @@ return array(
     'e69f7f6ee287b969198c3c9d6777bd38' => $vendorDir . '/symfony/polyfill-intl-normalizer/bootstrap.php',
     'b6b991a57620e2fb6b2f66f03fe9ddc2' => $vendorDir . '/symfony/string/Resources/functions.php',
     'ef65a1626449d89d0811cf9befce46f0' => $vendorDir . '/illuminate/events/functions.php',
+    'cfe4039aa2a78ca88e07dadb7b1c6126' => $baseDir . '/config.php',
 );
